@@ -16,7 +16,7 @@ caso esteja fora de pasta:
 
 https://site.com/get/USUARIO/SENHA
 
-## ss iptv tutorial
+## ssiptv tutorial
 
 tenha o ssiptv instalado
 
