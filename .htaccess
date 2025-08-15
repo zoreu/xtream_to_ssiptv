@@ -1,0 +1,19 @@
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase User-Agent ".*" allowed
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Headers "User-Agent,Content-Type"
+</IfModule>
+
+RewriteEngine On
+
+# Captura a URL no formato /ssiptv/usuario/senha
+RewriteRule ^get/([^/]+)/([^/]+)/?$ m3u.php?username=$1&password=$2 [QSA,L]
+RewriteRule ^channels/([^/]+)/([^/]+)/?$ channels.php?username=$1&password=$2 [QSA,L]
+RewriteRule ^vod/([^/]+)/([^/]+)/?$ vod.php?username=$1&password=$2 [QSA,L]
+RewriteRule ^vodcategory/([^/]+)/([^/]+)/([^/]+)/?$ vod_category.php?username=$1&password=$2&id=$3 [QSA,L]
+RewriteRule ^series/([^/]+)/([^/]+)/?$ series.php?username=$1&password=$2 [QSA,L]
+RewriteRule ^seriescategory/([^/]+)/([^/]+)/([^/]+)/?$ series_category.php?username=$1&password=$2&id=$3 [QSA,L]
+RewriteRule ^episodes/([^/]+)/([^/]+)/([^/]+)/?$ series_episodes.php?username=$1&password=$2&id=$3 [QSA,L]
