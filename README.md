@@ -2,7 +2,7 @@
 organizador xtream pra ssiptv proxy
 
 
-## modo de usar
+## MODO DE USAR:
 
 configure o config.php com host do iptv e pasta onde sera colocado na hospedagem caso queira
 
